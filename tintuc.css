@@ -1,0 +1,644 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Gutter space giữa các cột */
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Mặc định: Mỗi cột chiếm 100% chiều rộng trên điện thoại */
+[class*="col-"] {
+  width: 100%;
+  float: left;
+}
+/* Media Query cho mobile */
+@media only screen and (max-width: 599px) {
+  .col-xs-0 {
+    display: none !important;
+  }
+  .col-xs-1 {
+    display: block;
+  }
+  .col-xs-2 {
+    width: 16.66%;
+  }
+  .col-xs-3 {
+    width: 25%;
+  }
+  .col-xs-4 {
+    width: 33.33%;
+  }
+  .col-xs-5 {
+    width: 41.66%;
+  }
+  .col-xs-6 {
+    width: 50%;
+  }
+  .col-xs-7 {
+    width: 58.33%;
+  }
+  .col-xs-8 {
+    width: 66.66%;
+  }
+  .col-xs-9 {
+    width: 75%;
+  }
+  .col-xs-10 {
+    width: 83.33%;
+  }
+  .col-xs-11 {
+    width: 91.66%;
+  }
+  .col-xs-12 {
+    display: block !important;
+    width: 100% !important;
+  }
+  .col-xs-13 {
+    width: 100%;
+  }
+}
+
+/* Media Query cho tablet */
+@media only screen and (min-width: 600px) {
+  .col-s-0 {
+    display: none !important;
+  }
+  .col-s-1 {
+    display: block;
+  }
+  .col-s-2 {
+    width: 16.66%;
+  }
+  .col-s-3 {
+    width: 25%;
+  }
+  .col-s-4 {
+    width: 33.33%;
+  }
+  .col-s-5 {
+    width: 41.66%;
+  }
+  .col-s-6 {
+    width: 50%;
+  }
+  .col-s-7 {
+    width: 58.33%;
+  }
+  .col-s-8 {
+    width: 66.66%;
+  }
+  .col-s-9 {
+    width: 75%;
+  }
+  .col-s-10 {
+    width: 83.33%;
+  }
+  .col-s-11 {
+    width: 91.66%;
+  }
+  .col-s-12 {
+    display: block !important;
+    width: 100% !important;
+  }
+  .col-s-13 {
+    width: 100% !important;
+  }
+}
+
+/* Media Query cho desktop */
+@media only screen and (min-width: 768px) {
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    display: block !important;
+    width: 20%;
+  }
+  .col-3 {
+    width: 25% !important ;
+  }
+  .col-4 {
+    width: 33.33% !important;
+  }
+  .col-5 {
+    width: 41.66% !important;
+  }
+  .col-6 {
+    width: 50% !important;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    display: flex !important;
+    width: 100%;
+  }
+}
+
+body {
+  background-color: white;
+}
+
+.header {
+  justify-content: center;
+  padding: auto;
+  background-color: #e31837;
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  text-align: center;
+  width: 100%;
+}
+.logohd {
+  width: 110px;
+  height: 130px;
+  padding-top: 20px;
+}
+.tabheader {
+  margin-left: 20px;
+  margin-top: 50px;
+  padding-right: 20px;
+  display: flex;
+  text-decoration: none;
+}
+.tabheader > div {
+  width: 130px;
+}
+
+.Bigtabheader {
+  display: flex;
+}
+.btnhd {
+  text-align: center;
+  color: aliceblue;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  height: 50px;
+  margin-top: 14px;
+}
+.tabheader .btnhd:nth-child(6) .textbtnhd {
+  color: #d11633;
+}
+
+.textbtnhd {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  display: block;
+  padding: 12px;
+}
+.textbtnhd:hover {
+  color: #d11633;
+}
+.btnhd:nth-child(6) {
+  background-color: #e8bfc5;
+  color: red;
+}
+.btnhd:hover {
+  background-color: #e8bfc5;
+  color: red;
+}
+.thucdon {
+  position: relative;
+}
+#smalltab {
+  position: absolute;
+  display: none;
+  width: 1100px;
+  height: 130px;
+  font-size: 15px;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 3px;
+  margin-left: -250px;
+}
+#smalltab > li > a {
+  text-decoration: none;
+  color: black;
+}
+#smalltab > li {
+  font-size: 15px;
+  display: inline-block;
+}
+#smalltab > li > a:hover {
+  color: #d11633;
+}
+#smalltab > li > a > img:hover {
+  max-width: 140px;
+}
+#smalltab > li > a > img {
+  max-width: 130px;
+}
+#thucdonhd:hover #smalltab {
+  display: block;
+  background-color: #e8bfc5;
+}
+.pickup {
+  display: block;
+  font-size: 18px;
+  background-color: orange;
+  padding: 25px;
+  border-radius: 40px;
+  color: #f5f5f5;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+  margin-top: 25px;
+}
+.pickup:hover {
+  background-color: rgb(197, 130, 6);
+}
+.apickup {
+  text-decoration: none;
+}
+.std {
+  width: 200px;
+  height: 50px;
+  margin-top: 35px;
+  margin-left: 20px;
+}
+.Taikhoan {
+  border-radius: 10px;
+  background-color: orange;
+  margin-left: 1000px;
+  margin-right: 10px;
+  margin-top: 7px;
+  padding: 5px;
+  color: white;
+}
+.Taikhoan:hover {
+  background-color: rgb(197, 130, 6);
+  text-decoration: solid;
+}
+
+.kn {
+  text-decoration: none;
+  color: white;
+}
+.kn:hover {
+  text-decoration: underline;
+}
+
+/*-----------------------------------------------------------------------------*/
+#smalltabheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Giữ khoảng cách đều */
+  padding: 10px 20px;
+  background-color: #e31837;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#menu-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+#menu-icon div {
+  width: 40px;
+  height: 7px;
+  background-color: white;
+}
+
+#logo-jollibee {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+}
+
+#pickup {
+  position: absolute;
+  background-color: #ffc107;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  left: 67%;
+}
+
+#giaohangtannoi {
+  width: 100px;
+  position: absolute;
+  left: 85%;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px; /* Ẩn sang trái */
+  width: 220px;
+  height: 100vh;
+  background-color: #444;
+  color: white;
+  padding-top: 0px;
+  transition: 0.3s;
+  z-index: 1000;
+  overflow-y: auto; /* cho phép cuộn dọc */
+}
+#sidebar.active {
+  left: 0;
+}
+#sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#sidebar ul li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#sidebar ul li a {
+  font-size: 25px;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  background-color: #b0102c;
+}
+#thoatsidebar {
+  margin-left: 88%;
+  margin-right: 2%;
+  padding-left: 1px;
+  cursor: pointer;
+  font-size: 30px;
+}
+#thoatsidebar:hover {
+  background-color: #b0102c;
+  color: antiquewhite;
+}
+.sidebar-login {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #444;
+}
+
+.sidebar-login img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.sidebar-login a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.sidebar-login a:hover {
+  text-decoration: underline;
+}
+/* Ẩn submenu mặc định */
+.submenu {
+  display: none;
+  list-style: none;
+  padding-left: 20px;
+  background-color: #1f1f1f;
+}
+
+.submenu li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+  display: block;
+}
+
+/* Cho có khoảng cách trong li chính */
+.has-submenu > a {
+  cursor: pointer;
+}
+
+/*------------------------------------------------------------------------------------------------------------*/
+#bigimg_dichvu {
+  width: 100%;
+  height: 400px;
+  padding-top: 100px;
+  text-align: center;
+  color: white;
+  background-image: url(https://jollibee.com.vn/media/services/services.jpeg);
+  background-size: cover;
+  background-color: rgb(126, 126, 126);
+  background-blend-mode: darken;
+}
+.smalltab1 {
+  text-align: center;
+  margin-top: 10px;
+
+  padding: 5px;
+}
+.smalltab1 div {
+  border-radius: 10px;
+  border-color: #ccc;
+  border-style: solid;
+}
+.smalltab1 img {
+  width: 100%;
+  padding: 10px;
+  display: block;
+}
+.smalltab1 h5 {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  text-align: left;
+}
+.smalltab1 h6 {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-left: 10px;
+  font-size: 15px;
+}
+.smalltab1 a {
+  text-decoration: none;
+  color: black;
+}
+.smalltab1 a :hover {
+  color: #ccc;
+}
+#bigtab_tintuc {
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.title {
+  height: 350px;
+  background: url(https://jollibee.com.vn/static/version1742310603/frontend/Jollibee/default/vi_VN/images/franchise-bg.png);
+  background-size: cover;
+  text-align: center;
+  padding-top: 100px;
+  color: white;
+  font-size: 30px;
+  margin-top: 10px;
+}
+#tabnhuongquyen {
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+  justify-content: center;
+  margin: auto;
+  background-color: bisque;
+  text-align: center;
+}
+#imgnq {
+  width: 100%;
+}
+#tabnhuongquyen > div > p {
+  font-size: 25px;
+  margin-top: -5px;
+  line-height: 50px;
+  padding-left: 20px;
+}
+/*------------------------------------------------------------------------------------------------------------*/
+footer {
+  color: white;
+  font-size: 1.6rem;
+  line-height: 28px;
+}
+.tabft h3 {
+  padding-top: 10px;
+}
+.bigfooter {
+  background-color: #e31837;
+  padding-top: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tabft > p {
+  font-size: 16px;
+  color: white;
+  margin: 10px 0;
+}
+.tabft > div > p {
+  font-size: 16px;
+  color: white;
+  margin: 10px 0;
+}
+.tabft > div {
+  margin-top: 5px;
+}
+.logofooter {
+  width: 200px;
+  height: 200px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.tabft > img,
+.ggplay,
+.appstore {
+  width: 200px;
+  height: 80px;
+}
+#ungdung {
+  height: 30px;
+  display: none;
+}
+.appstore {
+  margin-top: 5px;
+  width: 260px;
+  height: 70px;
+}
+.ggplay {
+  margin-top: 5px;
+  width: 260px;
+  height: 70px;
+}
+.picchinhsach {
+  width: 300px;
+}
+.linkchinhsach {
+  text-decoration: none;
+  color: white;
+}
+.linkchinhsach:hover {
+  text-decoration: underline;
+}
+.Facebook,
+.Email {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.Facebook a,
+.Email a {
+  color: white;
+  text-decoration: none;
+}
+.Facebook a:hover,
+.Email a:hover {
+  text-decoration: underline;
+}
+.icon-fb {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.icon-mail {
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.dathongbao {
+  width: 150px;
+}
+
+.c {
+  background-color: #d11633;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.floating-cart {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #e53935;
+  color: white;
+  font-size: 45px;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: background 0.3s ease;
+}
+
+.floating-cart:hover {
+  background-color: #c62828;
+}

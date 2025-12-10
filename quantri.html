@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản trị</title>
+    <link rel="stylesheet" href="quantri.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo">
+        <img
+          src="https://jollibee.com.vn/static/version1742310603/frontend/Jollibee/default/vi_VN/images/logo.png"
+          alt="Logo Jollibee"
+        />
+      </div>
+      <ul class="menu">
+        <li class="active"><a href="quantri.html">Tổng quan</a></li>
+        <li><a href="qlsanpham.html">Quản lý sản phẩm</a></li>
+        <li><a href="qldonhang.html">Quản lý đơn hàng</a></li>
+        <li><a href="thongke.html">Thống kê</a></li>
+        <li><a href="index.html" target="_blank">Đến trang web bán hàng</a></li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <header>
+        <h1>Tổng quan</h1>
+        <div class="user-info">
+          <span>Administrator</span>
+          <button
+            class="logout-btn"
+            onclick="window.location.href='admindangnhap.html'"
+          >
+            Đăng xuất
+          </button>
+        </div>
+      </header>
+
+      <div class="dashboard-widgets">
+        <div class="widget widget-products">
+          <div class="icon">📱</div>
+          <div class="info">
+            <div class="title">Tổng sản phẩm</div>
+            <div class="value">100</div>
+          </div>
+        </div>
+        <div class="widget widget-revenue">
+          <div class="icon">💲</div>
+          <div class="info">
+            <div class="title">Doanh thu</div>
+            <div class="value">100.000.000</div>
+          </div>
+        </div>
+        <div class="widget widget-orders">
+          <div class="icon">🛒</div>
+          <div class="info">
+            <div class="title">Đơn hàng</div>
+            <div class="value">400</div>
+          </div>
+        </div>
+        <div class="widget widget-users">
+          <div class="icon">👥</div>
+          <div class="info">
+            <div class="title">Người dùng</div>
+            <div class="value">1250</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-section">
+        <h2>Doanh thu theo tháng</h2>
+        <div class="chart-container">
+          <canvas id="revenueChart"></canvas>
+        </div>
+        <h2 id="h2nam">Doanh thu theo năm</h2>
+        <div class="bieudo2">
+          <canvas id="nam"></canvas>
+        </div>
+      </div>
+
+      <div class="order-list-section">
+        <h2>Đơn hàng gần đây</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Mã đơn</th>
+              <th>Khách hàng</th>
+              <th>Ngày đặt</th>
+              <th>Tổng tiền</th>
+              <th>Trạng thái</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#12345</td>
+              <td>Nguyễn Văn A</td>
+              <td>20/04/2025</td>
+              <td>150.000₫</td>
+              <td>Đã giao</td>
+              <td><button>Xem</button></td>
+            </tr>
+            <tr>
+              <td>#12346</td>
+              <td>Trần Thị B</td>
+              <td>21/04/2025</td>
+              <td>220.000₫</td>
+              <td>Đang xử lý</td>
+              <td><button>Xem</button></td>
+            </tr>
+            <tr>
+              <td>#12347</td>
+              <td>Lê Thị C</td>
+              <td>22/04/2025</td>
+              <td>90.000₫</td>
+              <td>Đã hủy</td>
+              <td><button>Xem</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="quantri.js"></script>
+  </body>
+</html>

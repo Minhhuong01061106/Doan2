@@ -1,0 +1,82 @@
+body {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#left {
+  width: 30%;
+  text-align: center;
+  height: 70%;
+  background-color: whitesmoke;
+  margin: auto;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  border-radius: 30px;
+  border-color: #e31837;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#logo {
+  width: 100%;
+  height: 20%;
+  background-color: #e31837;
+  border-radius: 30px 30px 0 0;
+}
+#logo > img {
+  width: 45%;
+  height: 45%;
+}
+#logo > h1 {
+  color: white;
+  font-size: 250%;
+  text-align: center;
+  padding-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#right {
+  width: 80%;
+}
+#username {
+  width: 80%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  font-size: 20px;
+}
+#password {
+  width: 80%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  font-size: 20px;
+  margin-top: 12px;
+}
+#login {
+  width: 80%;
+  height: 50px;
+  background-color: #e31837;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+#login:hover {
+  background-color: #d11633;
+  transition: 0.3s;
+}
+#check {
+  display: flex;
+  justify-content: center;
+}
+#check > input {
+  width: 20px;
+  height: 20px;
+  margin-top: 15px;
+}
+#check > p {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 15px;
+  color: #e31837;
+}
