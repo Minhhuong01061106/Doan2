@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +13,7 @@
 /* Gutter space giữa các cột */
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 /* Mặc định: Mỗi cột chiếm 100% chiều rộng trên điện thoại */
@@ -154,6 +155,10 @@ body {
   background-color: white;
 }
 
+body * {
+  font-family: "Nunito", sans-serif;
+}
+
 .header {
   justify-content: center;
   padding: auto;
@@ -198,7 +203,7 @@ body {
 .textbtnhd {
   text-decoration: none;
   color: white;
-  font-size: 20px;
+  font-size: 17px;
   display: block;
   padding: 12px;
 }
@@ -239,7 +244,7 @@ body {
   color: #d11633;
 }
 #smalltab > li > a > img:hover {
-  max-width: 130px;
+  max-width: 140px;
 }
 #smalltab > li > a > img {
   max-width: 130px;
@@ -302,6 +307,7 @@ body {
   position: relative;
   padding-top: 60px;
   padding-bottom: 60px;
+  height: 100%;
 }
 
 #menu-icon {
@@ -321,7 +327,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
+  height: 80px;
 }
 
 #pickup {
@@ -433,34 +439,33 @@ body {
 
 /*------------------------------------------------------------------------------------------------------------*/
 
+header {
+  height: 160px;
+}
 .pics {
   position: relative; /* Làm cha cho các phần tử bên trong */
   overflow: hidden;
-  padding-top: 1px;
 }
 #imgbn {
   transition: opacity 1s ease-in-out;
 }
 .buttonbn {
   position: absolute;
-  font-size: 50px;
-  top: 50%;
+  font-size: 30px;
+  top: 45%;
   background-color: white;
   color: rgb(224, 93, 93);
   border-color: white;
-  border-radius: 50%;
+  border-radius: 20%;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  opacity: 0.8;
 }
 .buttonbn:hover {
   background-color: gainsboro;
   color: #d11633;
-  padding-top: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 10px;
 }
 #right {
   right: 0%;
@@ -481,10 +486,16 @@ body {
   background-color: #e31837;
   color: white;
   grid-column: span 1;
+  padding: 10px;
+}
+.homnayangi h1 {
+  font-size: 30px;
+  padding-top: 15px;
+  padding-bottom: 5px;
 }
 .logo {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   margin-left: 20px;
 }
 .thucdon {
@@ -515,12 +526,12 @@ body {
   font-size: 50px;
   color: #e31837;
   padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 .dv b {
   color: #e31837;
   font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 .td2 {
   background-color: #e31837;
@@ -563,7 +574,7 @@ body {
 .tabnhodv h4 {
   margin-top: 10px;
   font-size: 21px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 .textdv {
@@ -593,23 +604,25 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 700px;
 }
 .xinchao {
-  text-align: center;
   margin-top: -20px;
 }
-.xinchao1 {
-  padding: 200px;
-}
+
 .xinchao1 h1 {
   color: #e31837;
   padding: 10px;
-  font-size: 50px;
+  font-size: 30px;
   width: 100%;
   margin: auto;
 }
 .xinchao1 > h4 {
-  font-size: 25px;
+  font-size: 20px;
   color: rgb(55, 55, 55);
   padding-bottom: 50px;
   width: 100%;
@@ -618,10 +631,12 @@ body {
 .xinchao1 a {
   text-decoration: none;
   padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
   color: white;
   background-color: #e31837;
   border-radius: 15px;
-  font-size: 100%;
+  font-size: 20px;
   width: 100%;
   margin: auto;
 }
@@ -642,6 +657,7 @@ body {
 #ttTintuc {
   text-align: center;
   padding-top: 30px;
+  font-size: 30px;
 }
 .tabtintuc {
   grid-template-columns: 1fr;
@@ -656,19 +672,22 @@ body {
   flex-direction: column;
 }
 
+.anh {
+  padding: 10px;
+}
 .anh img {
-  width: 90%;
-  height: 80%;
+  width: 100%;
   border-radius: 20px;
-  margin: 5%;
 }
 .texttt {
   margin-left: 20px;
-  font-size: 21px;
+  font-size: 15px;
 }
+
 .texttt a {
   text-decoration: none;
   color: black;
+  font-family: "Nunito", sans-serif;
 }
 .texttt :hover {
   color: #d11633;
@@ -676,7 +695,7 @@ body {
 .xemthem {
   text-decoration: none;
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   background-color: #e31837;
   padding: 20px;
   border-radius: 15px;
@@ -694,59 +713,55 @@ body {
 footer {
   color: white;
   font-size: 1.6rem;
-  line-height: 28px;
+  line-height: 23px;
 }
 .tabft h3 {
   padding-top: 10px;
+  font-size: 15px;
 }
 .bigfooter {
   background-color: #e31837;
   padding-top: 30px;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
+  padding: 10px;
 }
 
 .tabft > p {
-  font-size: 16px;
+  font-size: 12px;
   color: white;
   margin: 10px 0;
 }
 .tabft > div > p {
-  font-size: 16px;
+  font-size: 13px;
   color: white;
-  margin: 10px 0;
+  margin: 12px 0;
 }
 .tabft > div {
   margin-top: 5px;
 }
 .logofooter {
-  width: 200px;
-  height: 200px;
+  width: 150px;
   padding-left: 20px;
   padding-top: 20px;
 }
-.tabft > img,
-.ggplay,
-.appstore {
-  width: 200px;
-  height: 80px;
-}
+
 #ungdung {
   height: 30px;
   display: none;
 }
 .appstore {
   margin-top: 5px;
-  width: 260px;
-  height: 70px;
+  width: 150px;
+  height: 45px;
 }
 .ggplay {
   margin-top: 5px;
-  width: 260px;
-  height: 70px;
+  width: 150px;
+  height: 45px;
 }
 .picchinhsach {
-  width: 300px;
+  width: 230px;
 }
 .linkchinhsach {
   text-decoration: none;
@@ -765,21 +780,22 @@ footer {
 .Email a {
   color: white;
   text-decoration: none;
+  font-size: 15px;
 }
 .Facebook a:hover,
 .Email a:hover {
   text-decoration: underline;
 }
 .icon-fb {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   margin-right: 10px;
 }
 
 .icon-mail {
   margin-top: 10px;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   margin-right: 10px;
 }
 
@@ -790,8 +806,9 @@ footer {
 .c {
   background-color: #d11633;
   color: white;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
+  font-size: 10px;
 }
 
 .floating-cart {
@@ -811,4 +828,135 @@ footer {
 
 .floating-cart:hover {
   background-color: #c62828;
+}
+
+/* Thêm vào cuối file CSS hiện có */
+
+/* Phần tìm kiếm và lọc */
+.filter-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 300px;
+}
+
+.search-box i {
+  color: #888;
+  margin-right: 8px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.filter-options {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-options select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 14px;
+}
+
+/* Phân trang */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.pagination button {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #f5f5f5;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#page-info {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Badge trạng thái */
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-active {
+  background-color: #e7f7ef;
+  color: #0d8a39;
+}
+
+.status-inactive {
+  background-color: #fee;
+  color: #d32f2f;
+}
+
+/* Badge vai trò */
+.role-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.role-user {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.role-staff {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.role-admin {
+  background-color: #fce4ec;
+  color: #c2185b;
+}
+
+/* Popup chỉnh sửa */
+.popup-content .form-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
 }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +13,7 @@
 /* Gutter space giữa các cột */
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 /* Mặc định: Mỗi cột chiếm 100% chiều rộng trên điện thoại */
@@ -62,9 +63,6 @@ html {
     display: block !important;
     width: 100% !important;
   }
-  .col-xs-13 {
-    width: 100%;
-  }
 }
 
 /* Media Query cho tablet */
@@ -109,9 +107,6 @@ html {
     display: block !important;
     width: 100% !important;
   }
-  .col-s-13 {
-    width: 100% !important;
-  }
 }
 
 /* Media Query cho desktop */
@@ -127,13 +122,13 @@ html {
     width: 25% !important ;
   }
   .col-4 {
-    width: 33.33% !important;
+    width: 33.33%;
   }
   .col-5 {
-    width: 41.66% !important;
+    width: 41.66%;
   }
   .col-6 {
-    width: 50% !important;
+    width: 50%;
   }
   .col-7 {
     width: 58.33%;
@@ -158,6 +153,10 @@ html {
 
 body {
   background-color: white;
+}
+
+body * {
+  font-family: "Nunito", sans-serif;
 }
 
 .header {
@@ -204,7 +203,7 @@ body {
 .textbtnhd {
   text-decoration: none;
   color: white;
-  font-size: 20px;
+  font-size: 17px;
   display: block;
   padding: 12px;
 }
@@ -308,6 +307,7 @@ body {
   position: relative;
   padding-top: 60px;
   padding-bottom: 60px;
+  height: 100%;
 }
 
 #menu-icon {
@@ -327,7 +327,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
+  height: 80px;
 }
 
 #pickup {
@@ -432,10 +432,13 @@ body {
   display: block;
 }
 
+/* Cho có khoảng cách trong li chính */
 .has-submenu > a {
   cursor: pointer;
 }
-
+header {
+  height: 160px;
+}
 /*------------------------------------------------------------------------------------------------------------*/
 #img_khuyenmai {
   width: 100%;
@@ -451,39 +454,16 @@ body {
   justify-content: center;
   margin-bottom: 40px;
   margin: auto;
-  width: 80%;
+  margin-bottom: 30px;
   background-color: bisque;
   padding: 10px;
 }
 .tabkhuyenmai > div {
   text-align: center;
-  width: 400px;
   padding-top: 20px;
 }
 .tabkhuyenmai > div > div:hover {
   background-color: white;
-}
-.tabkhuyenmai > div > div {
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 10px;
-  border-color: #ccc;
-  box-shadow: -5px 9px 15px rgba(0, 0, 0, 0.25);
-  width: 530px;
-  padding: 10px;
-  margin: 0 auto;
-  background-color: #d11633;
-}
-.tabkhuyenmai > div:hover a {
-  color: #d11633;
-}
-
-.tabkhuyenmai > div > div > a > img {
-  width: 500px;
-  border-radius: 10px;
-  gap: 20px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
 }
 .tabkhuyenmai a {
   text-align: center;
@@ -492,6 +472,29 @@ body {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
+.tabkhuyenmai > div > div {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: #ccc;
+  box-shadow: -5px 9px 15px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #d11633;
+  width: 90%;
+}
+.tabkhuyenmai > div > div:hover p {
+  color: #d11633;
+}
+
+.tabkhuyenmai > div > div > a > img {
+  width: 100%;
+  border-radius: 10px;
+  gap: 20px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
 .link > img {
   width: 100%;
   height: 100%;
@@ -503,60 +506,55 @@ body {
 footer {
   color: white;
   font-size: 1.6rem;
-  line-height: 28px;
-  margin-top: 20px;
+  line-height: 23px;
 }
 .tabft h3 {
   padding-top: 10px;
+  font-size: 15px;
 }
 .bigfooter {
   background-color: #e31837;
   padding-top: 30px;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
+  padding: 10px;
 }
 
 .tabft > p {
-  font-size: 16px;
+  font-size: 12px;
   color: white;
   margin: 10px 0;
 }
 .tabft > div > p {
-  font-size: 16px;
+  font-size: 13px;
   color: white;
-  margin: 10px 0;
+  margin: 12px 0;
 }
 .tabft > div {
   margin-top: 5px;
 }
 .logofooter {
-  width: 200px;
-  height: 200px;
+  width: 150px;
   padding-left: 20px;
   padding-top: 20px;
 }
-.tabft > img,
-.ggplay,
-.appstore {
-  width: 200px;
-  height: 80px;
-}
+
 #ungdung {
   height: 30px;
   display: none;
 }
 .appstore {
   margin-top: 5px;
-  width: 260px;
-  height: 70px;
+  width: 150px;
+  height: 45px;
 }
 .ggplay {
   margin-top: 5px;
-  width: 260px;
-  height: 70px;
+  width: 150px;
+  height: 45px;
 }
 .picchinhsach {
-  width: 300px;
+  width: 230px;
 }
 .linkchinhsach {
   text-decoration: none;
@@ -575,21 +573,22 @@ footer {
 .Email a {
   color: white;
   text-decoration: none;
+  font-size: 15px;
 }
 .Facebook a:hover,
 .Email a:hover {
   text-decoration: underline;
 }
 .icon-fb {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   margin-right: 10px;
 }
 
 .icon-mail {
   margin-top: 10px;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   margin-right: 10px;
 }
 
@@ -600,8 +599,9 @@ footer {
 .c {
   background-color: #d11633;
   color: white;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
+  font-size: 10px;
 }
 
 .floating-cart {

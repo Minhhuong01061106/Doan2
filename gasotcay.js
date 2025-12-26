@@ -1,5 +1,5 @@
 function toggleSubmenu(event) {
-  event.preventDefault(); // ngăn chuyển trang
+  event.preventDefault();
   const submenu = event.target.nextElementSibling;
   if (submenu.style.display === "block") {
     submenu.style.display = "none";

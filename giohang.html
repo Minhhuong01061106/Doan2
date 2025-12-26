@@ -221,19 +221,19 @@
           <h3>Thông tin giao hàng</h3>
           <div class="form-group">
             <label>Họ và tên:</label>
-            <input type="text" />
+            <input type="text" id="name" />
           </div>
           <div class="form-group">
             <label>Số điện thoại:</label>
-            <input type="text" />
+            <input type="text" id="sdt" />
           </div>
           <div class="form-group">
             <label>Địa chỉ giao hàng:</label>
-            <textarea rows="2"></textarea>
+            <textarea rows="2" id="dc"></textarea>
           </div>
           <div class="form-group">
             <label>Ghi chú (nếu có):</label>
-            <textarea rows="2"></textarea>
+            <textarea rows="2" id="gc"></textarea>
           </div>
         </div>
       </div>
@@ -241,7 +241,11 @@
       <!-- RIGHT -->
       <div class="right">
         <h3>Tổng giỏ hàng</h3>
-        <div><h3 class="cart-total">Tổng tiền: 0 đ</h3></div>
+        <div style="display: flex">
+          <h3>Tổng tiền:</h3>
+          <h3 class="cart-total" id="cart-total">0</h3>
+          <h3>đ</h3>
+        </div>
         <button class="checkout-btn">Thanh toán</button>
         <button class="continue-btn">
           <a href="monngonphaithu.html" id="btnmonngon">Tiếp tục mua sắm</a>

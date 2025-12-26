@@ -29,14 +29,13 @@ function renderCart() {
   if (order.length === 0) {
     cartEmpty.style.display = "block";
     cartTable.style.display = "none";
-    cartTotal.style.display = "none";
+
     return;
   }
 
   // Nếu có sản phẩm
   cartEmpty.style.display = "none";
   cartTable.style.display = "table";
-  cartTotal.style.display = "block";
 
   cartBody.innerHTML = "";
   let totalMoney = 0;
@@ -62,7 +61,7 @@ function renderCart() {
     `;
   });
 
-  cartTotal.innerText = "Tổng tiền: " + totalMoney.toLocaleString() + " đ";
+  cartTotal.innerText = totalMoney.toLocaleString();
 }
 
 function changeQty(index, amount) {
@@ -86,3 +85,69 @@ function deleteItem(index) {
 }
 
 renderCart();
+
+function thanhtoan() {
+  if (kiemtra() == 0) {
+    return;
+  }
+  if (!localStorage.getItem("orders")) {
+    localStorage.setItem("orders", "[]");
+  }
+
+  // Lấy giỏ hàng hiện tại
+  const currentCart = JSON.parse(localStorage.getItem("order")) || [];
+
+  // Tạo đơn hàng mới
+  const newOrder = {
+    id: Date.now(),
+    name: document.getElementById("name").value,
+    sdt: document.getElementById("sdt").value,
+    dc: document.getElementById("dc").value,
+    gc: document.getElementById("gc").value,
+    tt: document.getElementById("cart-total").textContent + " đ",
+    items: currentCart.map((item) => ({
+      img: item.img,
+      name: item.name,
+      price: item.price,
+      quantity: item.number,
+    })),
+  };
+
+  const orders = JSON.parse(localStorage.getItem("orders"));
+  orders.push(newOrder);
+  localStorage.setItem("orders", JSON.stringify(orders));
+
+  // Xóa giỏ hàng sau khi thanh toán
+  localStorage.removeItem("order");
+  renderCart();
+
+  alert("Oke");
+}
+
+const btntt = document.querySelector(".checkout-btn");
+
+btntt.onclick = function () {
+  thanhtoan();
+};
+
+function kiemtra() {
+  const ten = document.getElementById("name");
+  const sdt = document.getElementById("sdt");
+  const dc = document.getElementById("dc");
+  const tt = document.getElementById("cart-total");
+  const kt = 1;
+  if (ten.value == "") {
+    alert("Vui lòng nhập tên!");
+    kt = 0;
+  } else if (sdt.value == "") {
+    alert("Vui lòng nhập số điện thoại!");
+    kt = 0;
+  } else if (dc.value == "") {
+    alert("Vui lòng nhập địa chỉ!");
+    kt = 0;
+  } else if (tt.innerText == "0") {
+    alert("Giỏ hàng chưa có sản phẩm nào!");
+    kt = 0;
+  }
+  return kt;
+}

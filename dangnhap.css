@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +13,7 @@
 /* Gutter space giữa các cột */
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 /* Mặc định: Mỗi cột chiếm 100% chiều rộng trên điện thoại */
@@ -154,6 +155,10 @@ body {
   background-color: white;
 }
 
+body * {
+  font-family: "Nunito", sans-serif;
+}
+
 .header {
   justify-content: center;
   padding: auto;
@@ -191,18 +196,24 @@ body {
   height: 50px;
   margin-top: 14px;
 }
+.tabheader .btnhd:nth-child(1) .textbtnhd {
+  color: #d11633;
+}
 
 .textbtnhd {
   text-decoration: none;
   color: white;
-  font-size: 20px;
+  font-size: 17px;
   display: block;
   padding: 12px;
 }
 .textbtnhd:hover {
   color: #d11633;
 }
-
+.btnhd:nth-child(1) {
+  background-color: #e8bfc5;
+  color: red;
+}
 .btnhd:hover {
   background-color: #e8bfc5;
   color: red;
@@ -296,6 +307,7 @@ body {
   position: relative;
   padding-top: 60px;
   padding-bottom: 60px;
+  height: 100%;
 }
 
 #menu-icon {
@@ -315,7 +327,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
+  height: 80px;
 }
 
 #pickup {
@@ -410,6 +422,7 @@ body {
   display: none;
   list-style: none;
   padding-left: 20px;
+
   background-color: #1f1f1f;
 }
 
@@ -424,7 +437,9 @@ body {
 .has-submenu > a {
   cursor: pointer;
 }
-
+header {
+  height: 160px;
+}
 /*------------------------------------------------------------------------------------------------------------*/
 #body_dangnhap {
   background-color: #f5f5f5;
@@ -433,7 +448,7 @@ body {
   padding-bottom: 50px;
 }
 #body_dangnhap > h1 {
-  font-size: 50px;
+  font-size: 40px;
   color: #e31837;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
@@ -443,7 +458,7 @@ body {
   margin: 15px 0;
   border: 1px solid black;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 18px;
 }
 #body_dangnhap > a {
   text-decoration: none;
@@ -451,12 +466,12 @@ body {
   font-size: 20px;
 }
 #body_dangnhap > button {
-  width: 250px;
+  width: 200px;
   padding: 10px;
   margin: 15px 0;
   border: 1px solid black;
   border-radius: 5px;
-  font-size: 40px;
+  font-size: 20px;
   background-color: #e31837;
   color: white;
   cursor: pointer;
@@ -467,59 +482,55 @@ body {
 footer {
   color: white;
   font-size: 1.6rem;
-  line-height: 28px;
+  line-height: 23px;
 }
 .tabft h3 {
   padding-top: 10px;
+  font-size: 15px;
 }
 .bigfooter {
   background-color: #e31837;
   padding-top: 30px;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
+  padding: 10px;
 }
 
 .tabft > p {
-  font-size: 16px;
+  font-size: 12px;
   color: white;
   margin: 10px 0;
 }
 .tabft > div > p {
-  font-size: 16px;
+  font-size: 13px;
   color: white;
-  margin: 10px 0;
+  margin: 12px 0;
 }
 .tabft > div {
   margin-top: 5px;
 }
 .logofooter {
-  width: 200px;
-  height: 200px;
+  width: 150px;
   padding-left: 20px;
   padding-top: 20px;
 }
-.tabft > img,
-.ggplay,
-.appstore {
-  width: 200px;
-  height: 80px;
-}
+
 #ungdung {
   height: 30px;
   display: none;
 }
 .appstore {
   margin-top: 5px;
-  width: 260px;
-  height: 70px;
+  width: 150px;
+  height: 45px;
 }
 .ggplay {
   margin-top: 5px;
-  width: 260px;
-  height: 70px;
+  width: 150px;
+  height: 45px;
 }
 .picchinhsach {
-  width: 300px;
+  width: 230px;
 }
 .linkchinhsach {
   text-decoration: none;
@@ -538,21 +549,22 @@ footer {
 .Email a {
   color: white;
   text-decoration: none;
+  font-size: 15px;
 }
 .Facebook a:hover,
 .Email a:hover {
   text-decoration: underline;
 }
 .icon-fb {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   margin-right: 10px;
 }
 
 .icon-mail {
   margin-top: 10px;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   margin-right: 10px;
 }
 
@@ -563,6 +575,26 @@ footer {
 .c {
   background-color: #d11633;
   color: white;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
+  font-size: 10px;
+}
+
+.floating-cart {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #e53935;
+  color: white;
+  font-size: 45px;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: background 0.3s ease;
+}
+
+.floating-cart:hover {
+  background-color: #c62828;
 }

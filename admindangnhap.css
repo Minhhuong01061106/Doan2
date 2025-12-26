@@ -1,5 +1,5 @@
 body {
-  color: white;
+  background-color: rgb(229, 229, 229);
   font-family: Arial, Helvetica, sans-serif;
 }
 #left {
@@ -12,7 +12,7 @@ body {
   padding-bottom: 20px;
   border-radius: 30px;
   border-color: #e31837;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 #logo {
   width: 100%;
